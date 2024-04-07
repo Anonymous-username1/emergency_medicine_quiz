@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<HTML land="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="questionBank.js"></script>
+    <script defer src="script.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+    <title>Emergency Medicine Quiz</title>
+</head>
+<body>
+
+    <div class="Controls">
+        <!-- Controls has been renamed to buttons, and 2 new buttons added, and "start-btn btn" changed to "start-btn"-->
+        <button id="start_btn" class="start_btn">Start Quiz</button>
+
+    </div>
+
+    <div class="info_box">
+        <div class="info_title">
+            <span>Some rules for this Quiz</span>
+        </div>
+        <div class="info_list">
+            <div class="info">1. You'll be presented with <span> 5 questions</span> to answer.</div>
+            <div class="info">2. For each question, read through the vignette, select an answer, and <span>click submit</span>.</div>
+            <div class="info">3. Follow the link at the bottom, and have a read through the revision guide.</div>
+            <div class="info">4. If you answer correctly, the quiz proceeds to a new topic.</div>
+            <div class="info">5. If you answer incorrectly, the quiz stays on the same topic.</div>
+            <div class="info">6. You'll get points on the basis of your correct answers.</div>
+        </div>
+
+        <div class="buttons">
+            <button class="quit">Exit Quiz</button> 
+            <button class="restart">Continue</button>
+        </div>
+    </div>
+
+    <div id="quiz-Container" class="quiz_box hide">
+        <header>
+            <div class="title"> Super Duper Emergency Medicine Quiz</div>
+        </header>
+
+        <section class="section">
+            <h2 class="question" id="question">Question Text</h2>
+            <div id="image_box">
+                <img id="theImage" src="" alt="image" style="display: block;">
+            </div>
+
+            <ul class="option_list">
+                <li class="option">
+                    <input type="radio" name="answer" id="a" class="answer">
+                    <label for="a" id="a_text">Answer</label>
+                </li>
+
+                <li class="option">
+                    <input type="radio" name="answer" id="b" class="answer">
+                    <label for="b" id="b_text">Answer</label>
+                </li>
+
+                <li class="option">
+                    <input type="radio" name="answer" id="c" class="answer">
+                    <label for="c" id="c_text">Answer</label>
+                </li>
+
+                <li class="option">
+                    <input type="radio" name="answer" id="d" class="answer">
+                    <label for="d" id="d_text">Answer</label>
+                </li>
+            </ul>
+
+            <div class="qualifier" id="qualifier" style="display: none;"></div>
+            
+        </section>
+
+        <footer>
+            <div class="total_que">
+                <!--<span><p>2</p>of<p>5</p>Questions</span> -->
+            </div>
+            <div class="footer_controls">
+                <button id="submit" class="submit-btn btn">Submit</button>
+                <button id="next" class="next-btn btn">Next Ques</button>
+            </div>
+        </footer>
+
+        <section class="section2" id="section2" style="display: none;">
+            <h3 class="explanation_title" id="explanation_title">Explanation Title</h3>
+                <div class="explanation_text" id="explanation_text">
+                </div>
+                <a id="theLink" href="none" target= "_blank">(Click here to take me to the revision guide)</a>
+            </h3>
+        </section>
+
+    </div>
+
+            <!-- id="submit" class="submit-btn btn">Submit
+                 id="next" class="next-btn btn">Next Que-->
+    
+
+    <div class="result_box">
+        <div class="icon">
+            <i class="fas fa-crown"></i>
+        </div>
+        <div class="complete_text">You've completed the Quiz!</div>
+        <div class="score_text" id="score_text">
+            <!--<span>and sorry, You only got <p>2</p> out of <p>5</p></span>-->
+        </div>
+
+        <a id="assessmentLink" href="https://sites.google.com/exeter.ac.uk/revision-guide/home/assessment" target= "_blank">(Click here to take me to the assessment)</a>
+        <a id="feedbackLink" href="https://sites.google.com/exeter.ac.uk/revision-guide/home/feedback-form" target= "_blank">(Click here to take me to the feedback form)</a>
+        <a id="referencesLink" href="https://docs.google.com/document/d/1gdbuIAZxh0K9rMySgaURfZTjchHMjKPOXb5RXVWhJRs/edit" target= "_blank">(Click here to see the references)</a>
+
+        <div class="buttons">
+            <button onclick="location.reload()" class="restart">Replay Quiz</button>
+            <!--<button class="quit">Quit Quiz</button>-->
+        </div>
+    </div>
+
+</body>
+</HTML>
